@@ -82,7 +82,7 @@ const Clients = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* First Row - Left to Right */}
-          <div className="flex mb-6 animate-scroll-left hover:[animation-play-state:paused]">
+          <div className="flex mb-6 animate-scroll-left hover:[animation-play-state:paused]" style={{ animationDuration: '80s' }}>
             {duplicatedClients.map((client, index) => (
               <div
                 key={`row1-${client.name}-${index}`}
@@ -98,7 +98,7 @@ const Clients = () => {
           </div>
 
           {/* Second Row - Right to Left */}
-          <div className="flex animate-scroll-right hover:[animation-play-state:paused]">
+          <div className="flex animate-scroll-right hover:[animation-play-state:paused]" style={{ animationDuration: '80s' }}>
             {duplicatedClients.reverse().map((client, index) => (
               <div
                 key={`row2-${client.name}-${index}`}
