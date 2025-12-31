@@ -24,36 +24,30 @@ const Index = () => {
     <>
       <StructuredData />
       <Helmet>
-        <title>Kurin Hygienic – Premium Manpower & Facility Management Solutions</title>
+        <title>Comfort Technical Services – AC Service & Repair in Pune & PCMC</title>
         <meta
           name="description"
-          content="Kurin Hygienic provides 24x7 quality manpower and facility management services. Staff outsourcing, housekeeping, security, and MEP services in Pune."
+          content="Professional AC servicing, repair & installation in Pune & PCMC. 7+ years experience, 10,000+ units serviced. Same-day service available. Call now!"
         />
         <meta
           name="keywords"
-          content="manpower solutions, facility management, housekeeping, security services, Pune, staff outsourcing"
+          content="AC service Pune, AC repair PCMC, AC installation, AC gas refill, AC deep cleaning, split AC service, window AC repair"
         />
-        <link rel="canonical" href="https://kurinhygienic.com" />
+        <link rel="canonical" href="https://comfortservice.in" />
         
-        {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kurinhygienic.com" />
-        <meta property="og:title" content="Kurin Hygienic – Premium Manpower & Facility Management Solutions" />
-        <meta property="og:description" content="Kurin Hygienic provides 24x7 quality manpower and facility management services. Staff outsourcing, housekeeping, security, and MEP services in Pune." />
-        <meta property="og:image" content="https://kurinhygienic.com/favicon.png" />
-        <meta property="og:site_name" content="Kurin Hygienic" />
+        <meta property="og:url" content="https://comfortservice.in" />
+        <meta property="og:title" content="Comfort Technical Services – AC Service & Repair in Pune & PCMC" />
+        <meta property="og:description" content="Professional AC servicing, repair & installation in Pune & PCMC. 7+ years experience. Same-day service available." />
+        <meta property="og:site_name" content="Comfort Technical Services" />
         <meta property="og:locale" content="en_IN" />
         
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://kurinhygienic.com" />
-        <meta name="twitter:title" content="Kurin Hygienic – Premium Manpower & Facility Management Solutions" />
-        <meta name="twitter:description" content="Kurin Hygienic provides 24x7 quality manpower and facility management services. Staff outsourcing, housekeeping, security, and MEP services in Pune." />
-        <meta name="twitter:image" content="https://kurinhygienic.com/favicon.png" />
+        <meta name="twitter:title" content="Comfort Technical Services – AC Service & Repair in Pune & PCMC" />
+        <meta name="twitter:description" content="Professional AC servicing, repair & installation in Pune & PCMC. Same-day service available." />
         
-        {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Kurin Hygienic" />
+        <meta name="author" content="Comfort Technical Services" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Pune" />
       </Helmet>

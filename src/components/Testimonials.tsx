@@ -5,33 +5,39 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    quote: "Kurin Hygienic has transformed our facility management completely. Their professional team and attention to detail are exceptional. We couldn't ask for better service!",
+    quote: "Excellent service! Very professional and punctual. The technician explained everything clearly and fixed my AC in no time. Highly recommended!",
     name: "Rajesh Kumar",
-    company: "Niramaya Hospital",
+    location: "Aundh, Pune",
     rating: 5,
   },
   {
-    quote: "The level of professionalism and reliability from Kurin Hygienic is outstanding. They handle everything seamlessly and our workspace has never looked better.",
+    quote: "Best AC service in PCMC. They came within 2 hours of my call and the pricing was very transparent. No hidden charges at all. Will definitely use again!",
     name: "Priya Sharma",
-    company: "Millennium Construction",
+    location: "Pimpri",
     rating: 5,
   },
   {
-    quote: "Outstanding service quality and responsive team. Kurin Hygienic truly understands our business needs and delivers consistent results.",
-    name: "Vikram Patel",
-    company: "KIA Motors",
+    quote: "Affordable and reliable. Been using their services for 2 years now for my home and office ACs. Never had any complaints. Their AMC plan is worth it.",
+    name: "Amit Desai",
+    location: "Wakad",
     rating: 5,
   },
   {
-    quote: "We've been working with Kurin Hygienic for over 3 years now. Their dedication to maintaining high standards and quick response to our needs is commendable.",
-    name: "Anita Deshmukh",
-    company: "Kolte Patil Developers",
+    quote: "Called them for emergency AC repair on a Sunday and they still showed up within 3 hours. Great service even on weekends. Very impressed!",
+    name: "Sneha Patil",
+    location: "Hinjewadi",
     rating: 5,
   },
   {
-    quote: "Excellent housekeeping and security services. The team is well-trained, punctual, and always ready to go the extra mile for client satisfaction.",
-    name: "Suresh Mehta",
-    company: "Sukhwani Constructions",
+    quote: "The deep cleaning service transformed my 5-year-old AC. It's cooling like new again! The technician was thorough and cleaned everything properly.",
+    name: "Vikram Joshi",
+    location: "Baner",
+    rating: 5,
+  },
+  {
+    quote: "Very satisfied with the installation work. They did proper copper piping and the AC is working perfectly. Good workmanship at a reasonable price.",
+    name: "Meera Kulkarni",
+    location: "Kharadi",
     rating: 5,
   },
 ];
@@ -84,7 +90,7 @@ const Testimonials = () => {
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"
-      aria-label="Client testimonials"
+      aria-label="Customer testimonials"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -99,10 +105,10 @@ const Testimonials = () => {
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            What Our Clients Say
+            What Our Customers Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from our satisfied clients
+            Trusted by 5,000+ happy customers across Pune & PCMC
           </p>
         </motion.div>
 
@@ -175,7 +181,7 @@ const Testimonials = () => {
                       {testimonials[currentIndex].name}
                     </p>
                     <p className="text-xs md:text-sm text-muted-foreground">
-                      {testimonials[currentIndex].company}
+                      {testimonials[currentIndex].location}
                     </p>
                   </div>
                 </div>
@@ -201,6 +207,25 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
+
+        {/* Google Review CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center mt-10"
+        >
+          <a
+            href="https://g.page/r/comfort-technical-services/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-xl font-medium text-sm hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+          >
+            <Star className="w-4 h-4" />
+            Rate Us on Google
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Globe, Users, Handshake, Target } from "lucide-react";
+import { Users, Clock, Shield, IndianRupee } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -12,36 +12,34 @@ import {
 
 const features = [
   {
-    icon: Globe,
-    title: "National Perspective That Delivers",
-    description:
-      "Our global reach and local expertise deliver unmatched perspective with detailed insight into local markets.",
-    details: "With operations spanning across India, we bring a truly national perspective to workforce solutions. Our team understands regional differences in labor markets, compliance requirements, and cultural nuances. This deep local knowledge, combined with our broad network, enables us to source the right talent from anywhere in the country while ensuring seamless integration into your local operations. We maintain partnerships with training institutes and employment agencies in all major cities, giving us access to diverse talent pools that many regional agencies simply cannot match."
-  },
-  {
     icon: Users,
-    title: "Having All The Talent In The Country",
+    title: "Experienced Technicians",
     description:
-      "Our extensive network ensures access to the best talent across the nation for your workforce needs.",
-    details: "Our talent database includes over 10,000 pre-screened professionals across 14+ industries. From skilled technicians to management staff, from hospitality professionals to industrial workers, we have access to talent at every level. Our rigorous screening process includes skill assessments, background verification, and reference checks to ensure you get only the most qualified candidates. We also maintain relationships with vocational training centers, ITIs, and professional colleges to access fresh talent with the latest skills and certifications."
+      "7+ years of expertise with all AC brands and models.",
+    details: "Our technicians have over 7 years of hands-on experience servicing all major AC brands including LG, Samsung, Daikin, Voltas, Blue Star, Hitachi, and more. They undergo regular training to stay updated with the latest technologies and repair techniques. Each technician is background-verified and professionally trained to handle any AC issue efficiently."
   },
   {
-    icon: Handshake,
-    title: "Building Collaborative Partnerships",
+    icon: IndianRupee,
+    title: "Transparent Pricing",
     description:
-      "We design customized solutions based on your business and talent-related needs to deliver results.",
-    details: "We don't believe in one-size-fits-all solutions. Our team works closely with each client to understand their unique challenges, culture, and objectives. Whether you need temporary staffing for a seasonal surge, permanent placements for critical roles, or complete workforce management outsourcing, we design solutions that fit your specific requirements. Our account managers maintain regular communication to ensure ongoing alignment with your evolving needs. Many of our clients have been with us since our founding in 2018, a testament to the lasting partnerships we build."
+      "No hidden charges. Upfront quotes before any work begins.",
+    details: "We believe in complete transparency when it comes to pricing. Before starting any work, our technicians will inspect your AC and provide a detailed quote. There are no hidden fees or surprise charges. What we quote is what you pay. If additional issues are found, we'll always consult you first before proceeding."
   },
   {
-    icon: Target,
-    title: "Client Satisfaction Is Our Priority",
+    icon: Shield,
+    title: "All Brand Expertise",
     description:
-      "We provide suited candidates in any field while maintaining respectful relationships with clients.",
-    details: "Client satisfaction is measured not just by placement success rates, but by long-term retention and performance of our deployed staff. We maintain a 95% client retention rate and regularly conduct satisfaction surveys to continuously improve our services. Our dedicated support team is available 24/7 to address any concerns. We also provide regular performance reports and are always ready to make adjustments to ensure our staff meets your expectations. Your success is our success, and we go above and beyond to ensure every placement contributes to your business goals."
+      "We service all AC brands - LG, Samsung, Daikin, Voltas & more.",
+    details: "Whether you have a window AC, split AC, or cassette AC from any brand, our technicians can handle it. We maintain stock of genuine spare parts for all major brands including LG, Samsung, Daikin, Voltas, Blue Star, Hitachi, Carrier, Panasonic, Whirlpool, and many more. No brand is too old or too new for us."
+  },
+  {
+    icon: Clock,
+    title: "Quick Response",
+    description:
+      "Same-day service available. We reach you fast when you need us.",
+    details: "We understand that a non-working AC can be an emergency. That's why we offer same-day service for most requests made before 2 PM. Our strategic presence across Pune & PCMC means we can reach most locations within 2-4 hours. For scheduled appointments, we always arrive on time or notify you in advance of any delays."
   },
 ];
-
-
 
 const WhyChooseUs = () => {
   const ref = useRef(null);
@@ -62,14 +60,14 @@ const WhyChooseUs = () => {
             Why Choose Us
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
-            Your Trusted <span className="text-accent">Workforce Partner</span>
+            Your Trusted <span className="text-accent">AC Service Partner</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
-            We help employers identify the right candidates and provide job security.
+            Professional AC services with guaranteed satisfaction
           </p>
         </motion.div>
 
-        {/* Features Grid - More Compact */}
+        {/* Features Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-10">
           {features.map((feature, index) => (
             <motion.div

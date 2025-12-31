@@ -1,53 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Phone, ChevronDown } from "lucide-react";
+import { ArrowRight, Phone, Snowflake, Users, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
-// Client logos
-import sukhwaniConstructions from "@/assets/clients/sukhwani-constructions.png";
-import privetDrive from "@/assets/clients/privet-drive.png";
-import namrataGroup from "@/assets/clients/namrata-group.png";
-import millenniumConstruction from "@/assets/clients/millennium-construction.png";
-import sukhwaniPacific from "@/assets/clients/sukhwani-pacific.png";
-import shyamaBuilders from "@/assets/clients/shyama-builders.png";
-import bhandariAssociates from "@/assets/clients/bhandari-associates.png";
-import rohitInfra from "@/assets/clients/rohit-infra.png";
-import niramayaHospital from "@/assets/clients/niramaya-hospital.png";
-import seawindDevelopers from "@/assets/clients/seawind-developers.png";
-import kia from "@/assets/clients/kia.png";
-import saiSagarVentures from "@/assets/clients/sai-sagar-ventures.png";
-import millenniumEngineers from "@/assets/clients/millennium-engineers.png";
-import koltePatil from "@/assets/clients/kolte-patil.png";
-import sealtechEngineers from "@/assets/clients/sealtech-engineers.png";
-import millenniumParamount from "@/assets/clients/millennium-paramount.png";
-import savali from "@/assets/clients/savali.png";
-
-const clients = [
-  { name: "Sukhwani Constructions", logo: sukhwaniConstructions },
-  { name: "43 Privet Drive", logo: privetDrive },
-  { name: "Namrata Group", logo: namrataGroup },
-  { name: "Millennium Construction", logo: millenniumConstruction },
-  { name: "Sukhwani Pacific", logo: sukhwaniPacific },
-  { name: "Shyama Builders", logo: shyamaBuilders },
-  { name: "Bhandari Associates", logo: bhandariAssociates },
-  { name: "Rohit Infra", logo: rohitInfra },
-  { name: "Niramaya Hospital", logo: niramayaHospital },
-  { name: "Seawind Developers", logo: seawindDevelopers },
-  { name: "KIA", logo: kia },
-  { name: "Sai Sagar Ventures", logo: saiSagarVentures },
-  { name: "Millennium Engineers", logo: millenniumEngineers },
-  { name: "Kolte-Patil", logo: koltePatil },
-  { name: "Sealtech Engineers", logo: sealtechEngineers },
-  { name: "Millennium Paramount", logo: millenniumParamount },
-  { name: "Savali", logo: savali },
+const taglines = [
+  "Expert AC Service",
+  "Fast Repairs",
+  "Trusted Technicians",
+  "24/7 Support",
 ];
 
-const taglines = [
-  "Quality Manpower",
-  "Skilled Workforce",
-  "Professional Staff",
-  "Expert Solutions",
+const trustBadges = [
+  { icon: Users, label: "Experienced Technicians", desc: "Skilled professionals" },
+  { icon: Shield, label: "Trusted by Companies", desc: "Multiple corporate clients" },
+  { icon: Clock, label: "Same/Next-Day Service", desc: "Quick response time" },
+  { icon: Snowflake, label: "Service Warranty", desc: "Transparent pricing" },
 ];
 
 const Hero = () => {
@@ -133,7 +101,7 @@ const Hero = () => {
             left: el.x,
             top: el.y,
             background: index % 2 === 0 
-              ? `radial-gradient(circle, rgba(147, 112, 219, ${el.opacity}) 0%, transparent 70%)`
+              ? `radial-gradient(circle, rgba(59, 130, 246, ${el.opacity}) 0%, transparent 70%)`
               : `radial-gradient(circle, rgba(255, 255, 255, ${el.opacity * 0.6}) 0%, transparent 70%)`,
           }}
           initial={{ opacity: 0, scale: 0 }}
@@ -165,7 +133,7 @@ const Hero = () => {
         }}
       />
       <motion.div
-        className="absolute w-24 h-24 border border-purple-light/15 pointer-events-none"
+        className="absolute w-24 h-24 border border-blue-400/15 pointer-events-none"
         style={{ right: "18%", top: "22%", borderRadius: "35%" }}
         animate={{ 
           rotate: -360,
@@ -192,7 +160,7 @@ const Hero = () => {
       
       {/* Additional decorative elements */}
       <motion.div
-        className="absolute w-2 h-2 bg-purple-light/40 rounded-full pointer-events-none"
+        className="absolute w-2 h-2 bg-blue-400/40 rounded-full pointer-events-none"
         style={{ left: "25%", top: "40%" }}
         animate={{ 
           scale: [1, 2, 1],
@@ -221,14 +189,14 @@ const Hero = () => {
             className="flex flex-wrap items-center justify-center gap-3 mb-8"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm text-white/90 border border-white/20">
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              All Manpower Solutions
+              <Snowflake className="w-4 h-4 text-accent animate-pulse" />
+              All AC Solutions
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-emerald-500/20 backdrop-blur-sm text-emerald-300 border border-emerald-500/30">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              ISO 9001:2015 Certified
+              GSTIN: 27HEKPS5234F1Z4
             </span>
           </motion.div>
 
@@ -249,7 +217,7 @@ const Hero = () => {
                 className="heading-xl text-white drop-shadow-lg"
               >
                 {taglines[currentTagline]}{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-light via-purple-300 to-blue-200">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
                   At Your Fingertips
                 </span>
               </motion.h1>
@@ -262,8 +230,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-lg md:text-xl lg:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            Providing 24×7 quality services, 365 days a year. We connect human
-            potential to the power of business.
+            Professional AC servicing, repair & installation in Pune & PCMC.
+            Trusted by 10,000+ customers with 7+ years of experience.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -279,11 +247,11 @@ const Hero = () => {
               onClick={handleScrollToContact}
               className="group min-w-[130px] sm:min-w-[220px] text-sm sm:text-base px-4 sm:px-6"
             >
-              Get Quote
+              Book Service Now
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <a href="tel:7038613623">
+            <a href="tel:9876543210">
               <Button variant="heroOutline" size="xl" className="min-w-[130px] sm:min-w-[220px] text-sm sm:text-base px-4 sm:px-6">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 Call Now
@@ -294,55 +262,32 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Client Marquee - Enhanced */}
+      {/* Trust Badges - Bottom Section */}
       <motion.div 
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-        className="absolute bottom-0 left-0 right-0 bg-white/98 backdrop-blur-md py-3 md:py-6 border-t border-border/10 shadow-lg"
+        className="absolute bottom-0 left-0 right-0 bg-white/98 backdrop-blur-md py-4 md:py-6 border-t border-border/10 shadow-lg"
       >
-        <div className="w-full px-0">
-          <p className="text-center text-muted-foreground text-[10px] md:text-xs mb-2 md:mb-4 font-semibold tracking-[0.15em] md:tracking-[0.2em] uppercase">
-            Trusted by Industry Leaders
-          </p>
-          <div className="relative overflow-hidden w-full">
-            {/* Gradient Masks */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-            
-            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-              <div className="flex whitespace-nowrap">
-              {clients.map((client) => (
-                  <div
-                    key={client.name}
-                    className="flex-shrink-0 px-3 md:px-6 py-2 md:py-3 mx-1.5 md:mx-3 bg-white rounded-lg md:rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:border-accent/30 transition-all duration-300 flex items-center justify-center min-w-[100px] md:min-w-[160px] group"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      loading="lazy"
-                      className="h-10 md:h-16 w-auto max-w-[80px] md:max-w-[140px] object-contain transition-all duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex whitespace-nowrap" aria-hidden="true">
-                {clients.map((client) => (
-                  <div
-                    key={`${client.name}-dup`}
-                    className="flex-shrink-0 px-3 md:px-6 py-2 md:py-3 mx-1.5 md:mx-3 bg-white rounded-lg md:rounded-xl border border-border/50 shadow-sm hover:shadow-md hover:border-accent/30 transition-all duration-300 flex items-center justify-center min-w-[100px] md:min-w-[160px] group"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      loading="lazy"
-                      className="h-10 md:h-16 w-auto max-w-[80px] md:max-w-[140px] object-contain transition-all duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="section-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {trustBadges.map((badge, index) => (
+              <motion.div
+                key={badge.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 + index * 0.1 }}
+                className="flex items-center gap-3 p-2 md:p-3"
+              >
+                <div className="p-2 md:p-3 rounded-xl bg-accent/10">
+                  <badge.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                </div>
+                <div>
+                  <p className="text-xs md:text-sm font-semibold text-primary">{badge.label}</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground">{badge.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.div>
