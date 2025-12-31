@@ -6,10 +6,10 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#services", label: "Our Services" },
-  { href: "#process", label: "The Process" },
-  { href: "#industries", label: "Industries" },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#process", label: "How It Works" },
+  { href: "#industries", label: "Areas" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
@@ -96,11 +96,9 @@ const Navigation = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <img 
-                src={logo} 
-                alt="Kurin Hygienic" 
-                className="h-12 md:h-14 w-auto drop-shadow-md"
-              />
+              <span className="text-lg md:text-xl font-bold text-white drop-shadow-md">
+                Comfort Technical Services
+              </span>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -134,7 +132,7 @@ const Navigation = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="tel:7038613623" className="flex items-center gap-2">
+              <a href="tel:9876543210" className="flex items-center gap-2">
                 <Button
                   variant={isScrolled ? "accent" : "glass"}
                   size="lg"
