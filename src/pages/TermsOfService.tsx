@@ -18,7 +18,7 @@ const TermsOfService = () => {
         className="min-h-screen bg-background"
       >
         {/* Header */}
-        <div className="bg-primary text-primary-foreground py-16">
+        <div className="bg-slate-800 text-white py-16">
           <div className="container mx-auto px-4">
             <Link 
               to="/" 

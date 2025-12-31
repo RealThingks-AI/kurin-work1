@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 // Client logos
 import sukhwaniConstructions from "@/assets/clients/sukhwani-constructions.png";
@@ -22,28 +29,29 @@ import millenniumParamount from "@/assets/clients/millennium-paramount.png";
 import savali from "@/assets/clients/savali.png";
 
 const clients = [
-  { name: "Sukhwani Constructions", logo: sukhwaniConstructions },
-  { name: "43 Privet Drive", logo: privetDrive },
-  { name: "Namrata Group", logo: namrataGroup },
-  { name: "Millennium Construction", logo: millenniumConstruction },
-  { name: "Sukhwani Pacific", logo: sukhwaniPacific },
-  { name: "Shyama Builders", logo: shyamaBuilders },
-  { name: "Bhandari Associates", logo: bhandariAssociates },
-  { name: "Rohit Infra", logo: rohitInfra },
-  { name: "Niramaya Hospital", logo: niramayaHospital },
-  { name: "Seawind Developers", logo: seawindDevelopers },
-  { name: "KIA", logo: kia },
-  { name: "Sai Sagar Ventures", logo: saiSagarVentures },
-  { name: "Millennium Engineers", logo: millenniumEngineers },
-  { name: "Kolte-Patil", logo: koltePatil },
-  { name: "Sealtech Engineers", logo: sealtechEngineers },
-  { name: "Millennium Paramount", logo: millenniumParamount },
-  { name: "Savali", logo: savali },
+  { name: "Sukhwani Constructions", logo: sukhwaniConstructions, industry: "Real Estate & Construction", description: "One of Pune's leading real estate developers, trusted partner since 2019 for housekeeping and security staffing across multiple residential projects." },
+  { name: "43 Privet Drive", logo: privetDrive, industry: "Hospitality", description: "Premium hospitality establishment where we provide trained housekeeping and maintenance staff, ensuring exceptional guest experiences." },
+  { name: "Namrata Group", logo: namrataGroup, industry: "Real Estate", description: "Renowned real estate developer in Pune, partnering with us for comprehensive facility management and security services." },
+  { name: "Millennium Construction", logo: millenniumConstruction, industry: "Construction", description: "Major construction company relying on our skilled labor workforce for various construction projects across Maharashtra." },
+  { name: "Sukhwani Pacific", logo: sukhwaniPacific, industry: "Commercial Real Estate", description: "Commercial property development company utilizing our security and maintenance staffing services for their commercial complexes." },
+  { name: "Shyama Builders", logo: shyamaBuilders, industry: "Construction", description: "Growing construction firm benefiting from our workforce solutions for both skilled and unskilled labor requirements." },
+  { name: "Bhandari Associates", logo: bhandariAssociates, industry: "Engineering", description: "Engineering consultancy firm where we provide administrative and support staff to enhance operational efficiency." },
+  { name: "Rohit Infra", logo: rohitInfra, industry: "Infrastructure", description: "Infrastructure development company partnering with us for project-based staffing needs and facility management." },
+  { name: "Niramaya Hospital", logo: niramayaHospital, industry: "Healthcare", description: "Healthcare facility where we provide trained housekeeping, pantry, and support staff maintaining highest hygiene standards." },
+  { name: "Seawind Developers", logo: seawindDevelopers, industry: "Real Estate", description: "Real estate developer trusting our workforce solutions for property management and maintenance services." },
+  { name: "KIA", logo: kia, industry: "Automotive", description: "Global automotive manufacturer utilizing our skilled workforce for their manufacturing and facility management needs." },
+  { name: "Sai Sagar Ventures", logo: saiSagarVentures, industry: "Real Estate", description: "Real estate venture company relying on our security and housekeeping staff for their residential projects." },
+  { name: "Millennium Engineers", logo: millenniumEngineers, industry: "Engineering", description: "Engineering services firm benefiting from our technical and administrative staffing solutions." },
+  { name: "Kolte-Patil", logo: koltePatil, industry: "Real Estate", description: "One of India's leading real estate companies, long-term partner for comprehensive facility management services across their properties." },
+  { name: "Sealtech Engineers", logo: sealtechEngineers, industry: "Engineering", description: "Specialized engineering company where we provide trained technical support and facility maintenance staff." },
+  { name: "Millennium Paramount", logo: millenniumParamount, industry: "Real Estate", description: "Premium real estate developer utilizing our complete workforce solutions including security, housekeeping, and maintenance." },
+  { name: "Savali", logo: savali, industry: "Hospitality", description: "Hospitality business relying on our trained service staff to deliver exceptional customer experiences." },
 ];
 
 const Clients = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedClient, setSelectedClient] = useState<typeof clients[0] | null>(null);
 
   // Duplicate clients for seamless infinite scroll
   const duplicatedClients = [...clients, ...clients];
@@ -82,11 +90,12 @@ const Clients = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
           {/* First Row - Left to Right */}
-          <div className="flex mb-6 animate-scroll-left hover:[animation-play-state:paused]" style={{ animationDuration: '80s' }}>
+          <div className="flex mb-6 animate-scroll-left hover:[animation-play-state:paused]">
             {duplicatedClients.map((client, index) => (
               <div
                 key={`row1-${client.name}-${index}`}
-                className="flex-shrink-0 mx-3 bg-white rounded-xl border border-border p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group"
+                onClick={() => setSelectedClient(client)}
+                className="flex-shrink-0 mx-3 bg-white rounded-xl border border-border p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
               >
                 <img
                   src={client.logo}
@@ -98,11 +107,12 @@ const Clients = () => {
           </div>
 
           {/* Second Row - Right to Left */}
-          <div className="flex animate-scroll-right hover:[animation-play-state:paused]" style={{ animationDuration: '80s' }}>
-            {duplicatedClients.reverse().map((client, index) => (
+          <div className="flex animate-scroll-right hover:[animation-play-state:paused]">
+            {[...clients].reverse().map((client, index) => (
               <div
                 key={`row2-${client.name}-${index}`}
-                className="flex-shrink-0 mx-3 bg-white rounded-xl border border-border p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group"
+                onClick={() => setSelectedClient(client)}
+                className="flex-shrink-0 mx-3 bg-white rounded-xl border border-border p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
               >
                 <img
                   src={client.logo}
@@ -113,6 +123,36 @@ const Clients = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* Client Dialog */}
+        <Dialog open={selectedClient !== null} onOpenChange={() => setSelectedClient(null)}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <div className="flex flex-col items-center gap-4 mb-2">
+                <div className="p-4 rounded-xl bg-muted/50 border border-border">
+                  {selectedClient && (
+                    <img
+                      src={selectedClient.logo}
+                      alt={selectedClient.name}
+                      className="h-16 w-auto max-w-[180px] object-contain"
+                    />
+                  )}
+                </div>
+                <div className="text-center">
+                  <DialogTitle className="text-xl font-display mb-1">
+                    {selectedClient?.name}
+                  </DialogTitle>
+                  <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">
+                    {selectedClient?.industry}
+                  </span>
+                </div>
+              </div>
+              <DialogDescription className="text-base leading-relaxed pt-2 text-center">
+                {selectedClient?.description}
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
 
         {/* Trust Badge */}
         <motion.div

@@ -80,7 +80,7 @@ const Process = () => {
   };
 
   return (
-    <section id="process" className="section-padding bg-primary" ref={ref}>
+    <section id="process" className="section-padding bg-[#1e293b]" ref={ref}>
       <div className="section-container">
         {/* Header */}
         <motion.div
@@ -101,7 +101,7 @@ const Process = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="heading-lg text-primary-foreground mb-6"
+            className="heading-lg text-white mb-6"
           >
             Our <span className="text-accent">Recruiting & Selection Process</span>
           </motion.h2>
@@ -109,7 +109,7 @@ const Process = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-primary-foreground/70 mb-4"
+            className="text-xl text-white/70 mb-4"
           >
             Our recruitment principle mainly involves finding the right candidate with the best skills, experience, and personality to fit the job.
           </motion.p>
@@ -117,7 +117,7 @@ const Process = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-primary-foreground/60"
+            className="text-white/60"
           >
             A rigorous 10-step process ensuring you get only the best qualified and verified professionals.
           </motion.p>
@@ -128,7 +128,7 @@ const Process = () => {
           {/* First Row (Steps 1-5) */}
           <div className="relative mb-8">
             {/* Progress Line Row 1 */}
-            <div className="absolute top-5 left-[10%] right-[10%] h-1 bg-primary-foreground/10 rounded-full overflow-hidden">
+            <div className="absolute top-5 left-[10%] right-[10%] h-1 bg-white/10 rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-accent origin-left"
                 initial={{ scaleX: 0 }}
@@ -152,7 +152,7 @@ const Process = () => {
                     className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mb-4 z-10 transition-all duration-300 ${
                       activeStep >= index
                         ? "bg-accent text-accent-foreground shadow-glow"
-                        : "bg-primary-foreground/20 text-primary-foreground/60"
+                        : "bg-white/20 text-white/60"
                     }`}
                     animate={activeStep === index ? { scale: [1, 1.3, 1.15], rotate: [0, 5, -5, 0] } : { scale: activeStep >= index ? 1.1 : 1 }}
                     transition={{ duration: 0.4 }}
@@ -165,7 +165,7 @@ const Process = () => {
                     className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 transition-all duration-300 ${
                       activeStep >= index
                         ? "bg-accent/20 border-accent"
-                        : "bg-primary-foreground/10 border-primary-foreground/20"
+                        : "bg-white/10 border-white/20"
                     }`}
                     animate={activeStep === index ? { scale: [1, 1.15, 1.08], boxShadow: "0 0 30px rgba(var(--accent), 0.4)" } : {}}
                     transition={{ duration: 0.4 }}
@@ -176,7 +176,7 @@ const Process = () => {
                     >
                       <step.icon
                         className={`w-8 h-8 transition-colors duration-300 ${
-                          activeStep >= index ? "text-accent" : "text-primary-foreground/40"
+                          activeStep >= index ? "text-accent" : "text-white/40"
                         }`}
                       />
                     </motion.div>
@@ -185,7 +185,7 @@ const Process = () => {
                   {/* Text */}
                   <motion.h3
                     className={`font-display font-bold text-sm mb-1 transition-colors duration-300 ${
-                      activeStep >= index ? "text-primary-foreground" : "text-primary-foreground/50"
+                      activeStep >= index ? "text-white" : "text-white/50"
                     }`}
                     animate={activeStep === index ? { y: [0, -3, 0] } : {}}
                     transition={{ duration: 0.3 }}
@@ -194,7 +194,7 @@ const Process = () => {
                   </motion.h3>
                   <p
                     className={`text-xs transition-colors duration-300 ${
-                      activeStep >= index ? "text-primary-foreground/70" : "text-primary-foreground/40"
+                      activeStep >= index ? "text-white/70" : "text-white/40"
                     }`}
                   >
                     {step.description}
@@ -238,7 +238,7 @@ const Process = () => {
           {/* Second Row (Steps 6-10) */}
           <div className="relative">
             {/* Progress Line Row 2 */}
-            <div className="absolute top-5 left-[10%] right-[10%] h-1 bg-primary-foreground/10 rounded-full overflow-hidden">
+            <div className="absolute top-5 left-[10%] right-[10%] h-1 bg-white/10 rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-accent origin-left"
                 initial={{ scaleX: 0 }}
@@ -264,7 +264,7 @@ const Process = () => {
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mb-4 z-10 transition-all duration-300 ${
                         activeStep >= actualIndex
                           ? "bg-accent text-accent-foreground shadow-glow"
-                          : "bg-primary-foreground/20 text-primary-foreground/60"
+                          : "bg-white/20 text-white/60"
                       }`}
                       animate={activeStep === actualIndex ? { scale: [1, 1.3, 1.15], rotate: [0, 5, -5, 0] } : { scale: activeStep >= actualIndex ? 1.1 : 1 }}
                       transition={{ duration: 0.4 }}
@@ -277,7 +277,7 @@ const Process = () => {
                       className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 transition-all duration-300 ${
                         activeStep >= actualIndex
                           ? "bg-accent/20 border-accent"
-                          : "bg-primary-foreground/10 border-primary-foreground/20"
+                          : "bg-white/10 border-white/20"
                       }`}
                       animate={activeStep === actualIndex ? { scale: [1, 1.15, 1.08] } : {}}
                       transition={{ duration: 0.4 }}
@@ -288,7 +288,7 @@ const Process = () => {
                       >
                         <step.icon
                           className={`w-8 h-8 transition-colors duration-300 ${
-                            activeStep >= actualIndex ? "text-accent" : "text-primary-foreground/40"
+                            activeStep >= actualIndex ? "text-accent" : "text-white/40"
                           }`}
                         />
                       </motion.div>
@@ -297,7 +297,7 @@ const Process = () => {
                     {/* Text */}
                     <motion.h3
                       className={`font-display font-bold text-sm mb-1 transition-colors duration-300 ${
-                        activeStep >= actualIndex ? "text-primary-foreground" : "text-primary-foreground/50"
+                        activeStep >= actualIndex ? "text-white" : "text-white/50"
                       }`}
                       animate={activeStep === actualIndex ? { y: [0, -3, 0] } : {}}
                       transition={{ duration: 0.3 }}
@@ -306,7 +306,7 @@ const Process = () => {
                     </motion.h3>
                     <p
                       className={`text-xs transition-colors duration-300 ${
-                        activeStep >= actualIndex ? "text-primary-foreground/70" : "text-primary-foreground/40"
+                        activeStep >= actualIndex ? "text-white/70" : "text-white/40"
                       }`}
                     >
                       {step.description}
@@ -322,7 +322,7 @@ const Process = () => {
         <div className="lg:hidden">
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-foreground/10 overflow-hidden">
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-white/10 overflow-hidden">
               <motion.div
                 className="w-full bg-accent origin-top"
                 initial={{ height: 0 }}
@@ -339,30 +339,30 @@ const Process = () => {
                   initial={{ opacity: 0, x: 30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="relative flex gap-5 items-start"
+                  className="relative flex gap-4 items-start pl-2"
                 >
                   {/* Step Icon */}
                   <div className="relative z-10 flex-shrink-0">
                     <motion.div
-                      className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                      className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
                         activeStep >= index
                           ? "bg-accent/20 border-accent"
-                          : "bg-primary-foreground/10 border-primary-foreground/20"
+                          : "bg-white/10 border-white/20"
                       }`}
                       animate={activeStep === index ? { scale: [1, 1.1, 1.05] } : {}}
                       transition={{ duration: 0.3 }}
                     >
                       <step.icon
-                        className={`w-7 h-7 transition-colors duration-300 ${
-                          activeStep >= index ? "text-accent" : "text-primary-foreground/40"
+                        className={`w-6 h-6 sm:w-7 sm:h-7 transition-colors duration-300 ${
+                          activeStep >= index ? "text-accent" : "text-white/40"
                         }`}
                       />
                     </motion.div>
                     <motion.div
-                      className={`absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
+                      className={`absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                         activeStep >= index
                           ? "bg-accent text-accent-foreground shadow-glow"
-                          : "bg-primary-foreground/20 text-primary-foreground/60"
+                          : "bg-white/20 text-white/60"
                       }`}
                       animate={activeStep === index ? { scale: [1, 1.3, 1.1] } : {}}
                       transition={{ duration: 0.3 }}
@@ -372,17 +372,17 @@ const Process = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="pt-2">
+                  <div className="flex-1 min-w-0 pt-1 pr-2">
                     <h3
-                      className={`font-display font-bold text-lg mb-1 transition-colors duration-300 ${
-                        activeStep >= index ? "text-primary-foreground" : "text-primary-foreground/50"
+                      className={`font-display font-bold text-base sm:text-lg mb-1 transition-colors duration-300 ${
+                        activeStep >= index ? "text-white" : "text-white/50"
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
                       className={`text-sm transition-colors duration-300 ${
-                        activeStep >= index ? "text-primary-foreground/70" : "text-primary-foreground/40"
+                        activeStep >= index ? "text-white/70" : "text-white/40"
                       }`}
                     >
                       {step.description}

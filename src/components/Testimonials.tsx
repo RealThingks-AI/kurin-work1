@@ -144,37 +144,37 @@ const Testimonials = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="bg-background rounded-2xl p-8 md:p-12 shadow-lg border border-border relative"
+                className="bg-background rounded-xl md:rounded-2xl p-5 md:p-12 shadow-lg border border-border relative"
               >
                 {/* Quote Icon */}
-                <div className="absolute top-6 right-6 md:top-8 md:right-8">
-                  <Quote className="w-12 h-12 text-accent/20" />
+                <div className="absolute top-4 right-4 md:top-8 md:right-8">
+                  <Quote className="w-8 h-8 md:w-12 md:h-12 text-accent/20" />
                 </div>
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-4 md:mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
+                <blockquote className="text-sm md:text-xl text-foreground leading-relaxed mb-5 md:mb-8">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
 
                 {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                    <span className="text-lg font-bold text-accent">
+                <div className="flex items-center gap-3 md:gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span className="text-base md:text-lg font-bold text-accent">
                       {testimonials[currentIndex].name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">
+                    <p className="font-semibold text-foreground text-sm md:text-base">
                       {testimonials[currentIndex].name}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs md:text-sm text-muted-foreground">
                       {testimonials[currentIndex].company}
                     </p>
                   </div>
