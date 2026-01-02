@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
           <span className="inline-block px-3 py-1.5 mb-3 text-sm font-medium rounded-full bg-accent/10 text-accent">
             Why Choose Us
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
             Your Trusted <span className="text-accent">AC Service Partner</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-base">
@@ -84,7 +84,7 @@ const WhyChooseUs = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-semibold text-primary mb-1 md:mb-2 text-xs md:text-sm leading-tight">
+              <h3 className="font-semibold text-foreground mb-1 md:mb-2 text-xs md:text-sm leading-tight">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground text-[10px] md:text-xs leading-relaxed hidden md:block">

@@ -43,7 +43,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
       {isVisible && (
         <motion.div
           className="fixed inset-0 z-[9999] flex items-center justify-center"
-          style={{ background: 'linear-gradient(135deg, hsl(230, 55%, 12%) 0%, hsl(230, 45%, 18%) 50%, hsl(265, 50%, 25%) 100%)' }}
+          style={{ background: 'linear-gradient(135deg, hsl(222, 47%, 11%) 0%, hsl(213, 70%, 18%) 50%, hsl(199, 60%, 25%) 100%)' }}
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -53,7 +53,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
             {[...Array(10)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-accent/20 rounded-full"
+                className="absolute w-2 h-2 bg-cyan/20 rounded-full"
                 initial={{
                   x: Math.random() * window.innerWidth,
                   y: Math.random() * window.innerHeight,
@@ -85,7 +85,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
             >
               {/* Glow effect */}
               <motion.div
-                className="absolute inset-0 bg-accent/30 rounded-full blur-3xl"
+                className="absolute inset-0 bg-cyan/30 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   opacity: [0.3, 0.6, 0.3],
@@ -99,7 +99,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
 
               {/* Spinning ring */}
               <motion.div
-                className="absolute -inset-4 border-2 border-accent/30 rounded-full"
+                className="absolute -inset-4 border-2 border-cyan/30 rounded-full"
                 animate={{ rotate: 360 }}
                 transition={{
                   duration: 3,
@@ -110,7 +110,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
 
               {/* Second spinning ring */}
               <motion.div
-                className="absolute -inset-8 border border-accent/20 rounded-full"
+                className="absolute -inset-8 border border-sky-400/20 rounded-full"
                 animate={{ rotate: -360 }}
                 transition={{
                   duration: 5,
@@ -142,7 +142,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <span className="text-accent">Comfort</span> Technical Services
+              <span className="text-cyan">Comfort</span> Technical Services
             </motion.h1>
 
             {/* Tagline */}
@@ -163,7 +163,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
               transition={{ delay: 0.6, duration: 0.4 }}
             >
               <motion.div
-                className="h-full bg-gradient-to-r from-accent to-accent-light rounded-full"
+                className="h-full bg-gradient-to-r from-sky-400 to-cyan rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.1 }}

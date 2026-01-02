@@ -68,7 +68,7 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Gradient Overlay - Enhanced */}
+      {/* Gradient Overlay - Clean Navy Blue */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -78,8 +78,8 @@ const Hero = () => {
 
       {/* Animated Gradient Mesh */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-purple-light/20 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-accent/15 to-transparent" />
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-radial from-sky-400/20 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-cyan/15 to-transparent" />
       </div>
 
       {/* Subtle Pattern Overlay */}
@@ -101,7 +101,7 @@ const Hero = () => {
             left: el.x,
             top: el.y,
             background: index % 2 === 0 
-              ? `radial-gradient(circle, rgba(59, 130, 246, ${el.opacity}) 0%, transparent 70%)`
+              ? `radial-gradient(circle, rgba(14, 165, 233, ${el.opacity}) 0%, transparent 70%)`
               : `radial-gradient(circle, rgba(255, 255, 255, ${el.opacity * 0.6}) 0%, transparent 70%)`,
           }}
           initial={{ opacity: 0, scale: 0 }}
@@ -133,7 +133,7 @@ const Hero = () => {
         }}
       />
       <motion.div
-        className="absolute w-24 h-24 border border-blue-400/15 pointer-events-none"
+        className="absolute w-24 h-24 border border-sky-400/15 pointer-events-none"
         style={{ right: "18%", top: "22%", borderRadius: "35%" }}
         animate={{ 
           rotate: -360,
@@ -160,7 +160,7 @@ const Hero = () => {
       
       {/* Additional decorative elements */}
       <motion.div
-        className="absolute w-2 h-2 bg-blue-400/40 rounded-full pointer-events-none"
+        className="absolute w-2 h-2 bg-sky-400/40 rounded-full pointer-events-none"
         style={{ left: "25%", top: "40%" }}
         animate={{ 
           scale: [1, 2, 1],
@@ -189,7 +189,7 @@ const Hero = () => {
             className="flex flex-wrap items-center justify-center gap-3 mb-8"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm text-white/90 border border-white/20">
-              <Snowflake className="w-4 h-4 text-accent animate-pulse" />
+              <Snowflake className="w-4 h-4 text-sky-400 animate-pulse" />
               All AC Solutions
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-emerald-500/20 backdrop-blur-sm text-emerald-300 border border-emerald-500/30">
@@ -217,7 +217,7 @@ const Hero = () => {
                 className="heading-xl text-white drop-shadow-lg"
               >
                 {taglines[currentTagline]}{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan to-sky-200">
                   At Your Fingertips
                 </span>
               </motion.h1>
@@ -283,7 +283,7 @@ const Hero = () => {
                   <badge.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs md:text-sm font-semibold text-primary">{badge.label}</p>
+                  <p className="text-xs md:text-sm font-semibold text-foreground">{badge.label}</p>
                   <p className="text-[10px] md:text-xs text-muted-foreground">{badge.desc}</p>
                 </div>
               </motion.div>

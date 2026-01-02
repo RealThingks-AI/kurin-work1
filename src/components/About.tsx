@@ -83,7 +83,7 @@ const About = () => {
           >
             {/* Decorative elements */}
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/10 rounded-2xl -z-10" />
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-400/10 rounded-2xl -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan/10 rounded-2xl -z-10" />
             
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <motion.img
@@ -93,7 +93,7 @@ const About = () => {
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 whileHover={{ scale: 1.02 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
               
               {/* Floating Badge */}
               <motion.div
@@ -107,7 +107,7 @@ const About = () => {
                     <Award className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-primary">5.0 Google Rating</div>
+                    <div className="text-sm font-semibold text-foreground">5.0 Google Rating</div>
                     <div className="text-xs text-muted-foreground">57+ Verified Reviews</div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 200 }}
-              className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-gradient-to-br from-accent to-blue-600 text-white px-4 py-3 md:px-8 md:py-6 rounded-xl md:rounded-2xl shadow-glow-lg"
+              className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-gradient-to-br from-accent to-sky-500 text-white px-4 py-3 md:px-8 md:py-6 rounded-xl md:rounded-2xl shadow-glow-lg"
             >
               <div className="text-2xl md:text-4xl font-bold font-display">2018</div>
               <div className="text-xs md:text-sm opacity-90">Since</div>
@@ -142,9 +142,9 @@ const About = () => {
               About Us
             </motion.span>
             
-            <h2 className="heading-lg text-primary mb-6">
+            <h2 className="heading-lg text-foreground mb-6">
               Your Trusted Partner for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan">
                 Professional AC Services
               </span>
             </h2>
@@ -173,10 +173,10 @@ const About = () => {
                 className="group p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-accent/10 to-blue-400/10 group-hover:from-accent/20 group-hover:to-blue-400/20 transition-colors">
+                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 group-hover:from-accent/20 group-hover:to-cyan/20 transition-colors">
                     <Eye className="w-5 h-5 text-accent" />
                   </div>
-                  <h3 className="font-display font-bold text-primary">
+                  <h3 className="font-display font-bold text-foreground">
                     Our Vision
                   </h3>
                 </div>
@@ -193,13 +193,13 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 onClick={() => setSelectedCard({ type: 'mission' })}
-                className="group p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 cursor-pointer"
+                className="group p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary/10 to-blue-400/10 group-hover:from-primary/20 group-hover:to-blue-400/20 transition-colors">
-                    <Rocket className="w-5 h-5 text-primary" />
+                  <div className="p-2.5 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 group-hover:from-accent/20 group-hover:to-cyan/20 transition-colors">
+                    <Rocket className="w-5 h-5 text-accent" />
                   </div>
-                  <h3 className="font-display font-bold text-primary">
+                  <h3 className="font-display font-bold text-foreground">
                     Our Mission
                   </h3>
                 </div>
@@ -218,8 +218,8 @@ const About = () => {
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
               <div className="flex items-center gap-3 mb-2">
-                <div className={`p-3 rounded-xl ${selectedCard?.type === 'vision' ? 'bg-accent/10' : 'bg-primary/10'}`}>
-                  {selectedCard?.type === 'vision' ? <Eye className="w-6 h-6 text-accent" /> : <Rocket className="w-6 h-6 text-primary" />}
+                <div className="p-3 rounded-xl bg-accent/10">
+                  {selectedCard?.type === 'vision' ? <Eye className="w-6 h-6 text-accent" /> : <Rocket className="w-6 h-6 text-accent" />}
                 </div>
                 <DialogTitle className="text-xl font-display">
                   {selectedCard?.type === 'vision' ? 'Our Vision' : 'Our Mission'}
@@ -249,7 +249,7 @@ const About = () => {
               onClick={() => setSelectedCard({ type: 'stat', data: stat })}
             >
               <div className="text-center p-4 md:p-6 rounded-xl md:rounded-2xl bg-card border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                <div className="text-3xl md:text-5xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-br from-accent to-blue-600 mb-1 md:mb-2">
+                <div className="text-3xl md:text-5xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-br from-accent to-cyan mb-1 md:mb-2">
                   {stat.value.toLocaleString()}{stat.suffix}
                 </div>
                 <div className="text-xs md:text-sm text-muted-foreground font-medium">{stat.label}</div>
@@ -264,7 +264,7 @@ const About = () => {
           <DialogContent className="sm:max-w-lg">
             <DialogHeader>
               <div className="flex items-center gap-3 mb-2">
-                <div className="text-4xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-br from-accent to-blue-600">
+                <div className="text-4xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-br from-accent to-cyan">
                   {selectedCard?.data?.value?.toLocaleString()}{selectedCard?.data?.suffix}
                 </div>
               </div>
@@ -286,7 +286,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center"
         >
-          <h3 className="heading-md text-primary mb-10">
+          <h3 className="heading-md text-foreground mb-10">
             Our <span className="text-accent">Core Values</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
@@ -301,11 +301,11 @@ const About = () => {
                 className="group p-4 md:p-6 bg-card rounded-xl md:rounded-2xl border border-border shadow-sm hover:shadow-xl hover:border-accent/30 transition-all duration-300 cursor-pointer"
               >
                 <div className="relative mx-auto mb-3 md:mb-4">
-                  <div className="p-3 md:p-4 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 to-blue-400/10 w-fit mx-auto group-hover:from-accent/20 group-hover:to-blue-400/20 transition-all duration-300">
+                  <div className="p-3 md:p-4 rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/10 to-cyan/10 w-fit mx-auto group-hover:from-accent/20 group-hover:to-cyan/20 transition-all duration-300">
                     <value.icon className="w-5 h-5 md:w-7 md:h-7 text-accent group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </div>
-                <h4 className="font-display font-semibold text-primary text-xs md:text-sm mb-1 md:mb-2">
+                <h4 className="font-display font-semibold text-foreground text-xs md:text-sm mb-1 md:mb-2">
                   {value.label}
                 </h4>
                 <p className="text-muted-foreground text-[10px] md:text-xs hidden md:block">

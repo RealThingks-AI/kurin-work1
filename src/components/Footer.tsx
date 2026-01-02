@@ -22,9 +22,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[#0f172a] pt-16 pb-8" ref={ref}>
+    <footer className="relative bg-navy pt-16 pb-8" ref={ref}>
       {/* Decorative Top Border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-purple-dark to-accent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-cyan to-accent" />
 
       <div className="section-container">
         {/* Main Footer Content */}
