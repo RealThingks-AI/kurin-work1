@@ -68,7 +68,7 @@ const Process = () => {
   };
 
   return (
-    <section id="process" className="section-padding bg-[#1e293b]" ref={ref}>
+    <section id="process" className="section-padding bg-navy" ref={ref}>
       <div className="section-container">
         {/* Header */}
         <motion.div
@@ -146,7 +146,7 @@ const Process = () => {
                         ? "bg-accent/20 border-accent"
                         : "bg-white/10 border-white/20"
                     }`}
-                    animate={activeStep === index ? { scale: [1, 1.15, 1.08], boxShadow: "0 0 30px rgba(var(--accent), 0.4)" } : {}}
+                    animate={activeStep === index ? { scale: [1, 1.15, 1.08], boxShadow: "0 0 30px rgba(14, 165, 233, 0.4)" } : {}}
                     transition={{ duration: 0.4 }}
                   >
                     <motion.div

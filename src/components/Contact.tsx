@@ -276,9 +276,9 @@ const Contact = () => {
             <MessageCircle className="w-4 h-4" />
             Get In Touch
           </motion.span>
-          <h2 className="heading-lg text-primary mb-5">
+          <h2 className="heading-lg text-foreground mb-5">
             Ready to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-dark">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan">
               Get Started?
             </span>
           </h2>
@@ -295,7 +295,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="heading-md text-primary mb-8">Contact Information</h3>
+            <h3 className="heading-md text-foreground mb-8">Contact Information</h3>
 
             <div className="space-y-6">
               {/* Address */}
@@ -306,11 +306,11 @@ const Contact = () => {
                 whileHover={{ x: 4 }}
                 className="flex gap-4 p-4 rounded-2xl hover:bg-accent/5 transition-colors cursor-default"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-purple-light/10 h-fit">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 h-fit">
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-primary mb-1">
+                  <h4 className="font-display font-semibold text-foreground mb-1">
                     Office Address
                   </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -331,11 +331,11 @@ const Contact = () => {
                 whileHover={{ x: 4 }}
                 className="flex gap-4 p-4 rounded-2xl hover:bg-accent/5 transition-colors cursor-default"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-purple-light/10 h-fit">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 h-fit">
                   <Phone className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-primary mb-1">
+                  <h4 className="font-display font-semibold text-foreground mb-1">
                     Phone
                   </h4>
                   <div className="space-y-1">
@@ -363,11 +363,11 @@ const Contact = () => {
                 whileHover={{ x: 4 }}
                 className="flex gap-4 p-4 rounded-2xl hover:bg-accent/5 transition-colors cursor-default"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-purple-light/10 h-fit">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 h-fit">
                   <Mail className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-primary mb-1">
+                  <h4 className="font-display font-semibold text-foreground mb-1">
                     Email
                   </h4>
                   <a
@@ -387,11 +387,11 @@ const Contact = () => {
                 whileHover={{ x: 4 }}
                 className="flex gap-4 p-4 rounded-2xl hover:bg-accent/5 transition-colors cursor-default"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-purple-light/10 h-fit">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 h-fit">
                   <Clock className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-primary mb-1">
+                  <h4 className="font-display font-semibold text-foreground mb-1">
                     Business Hours
                   </h4>
                   <div className="text-muted-foreground text-sm space-y-1">
@@ -409,7 +409,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="mt-6"
             >
-              <h4 className="font-display font-semibold text-primary mb-4">
+              <h4 className="font-display font-semibold text-foreground mb-4">
                 Find Us Here
               </h4>
               <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
@@ -445,7 +445,7 @@ const Contact = () => {
           >
             <div className="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-xl relative overflow-hidden">
               {/* Decorative gradient */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-purple-light/10 rounded-full blur-3xl -z-0" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-cyan/10 rounded-full blur-3xl -z-0" />
               
               {/* Progress indicator */}
               <div className="mb-6 relative z-10">
@@ -455,7 +455,7 @@ const Contact = () => {
                 </div>
                 <div className="h-2 bg-muted rounded-full overflow-hidden">
                   <motion.div 
-                    className="h-full bg-gradient-to-r from-accent to-purple-dark rounded-full"
+                    className="h-full bg-gradient-to-r from-accent to-cyan rounded-full"
                     initial={{ width: 0 }}
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.3 }}
@@ -473,24 +473,28 @@ const Contact = () => {
                     <Input
                       id="name"
                       type="text"
-                      placeholder="Enter your full name"
+                      placeholder="Enter your name"
                       value={formData.name}
                       onChange={(e) => handleNameChange(e.target.value)}
                       onFocus={() => setFocusedField("name")}
                       onBlur={() => handleBlur("name")}
                       className={getInputStyles("name")}
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "name-error" : undefined}
                     />
                     <div className="absolute right-3 top-1/2 -translate-y-1/2">
                       {renderFieldStatus("name")}
                     </div>
                   </div>
                   {touched.name && errors.name && (
-                    <motion.p 
-                      initial={{ opacity: 0, y: -10 }}
+                    <motion.p
+                      initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-1.5 text-xs text-destructive flex items-center gap-1"
+                      id="name-error"
+                      className="text-xs text-destructive mt-1.5 flex items-center gap-1"
                     >
-                      <X className="w-3 h-3" /> {errors.name}
+                      <X className="w-3 h-3" />
+                      {errors.name}
                     </motion.p>
                   )}
                 </div>
@@ -504,24 +508,28 @@ const Contact = () => {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="Enter your email address"
+                      placeholder="Enter your email"
                       value={formData.email}
                       onChange={(e) => handleEmailChange(e.target.value)}
                       onFocus={() => setFocusedField("email")}
                       onBlur={() => handleBlur("email")}
                       className={getInputStyles("email")}
+                      aria-invalid={!!errors.email}
+                      aria-describedby={errors.email ? "email-error" : undefined}
                     />
                     <div className="absolute right-3 top-1/2 -translate-y-1/2">
                       {renderFieldStatus("email")}
                     </div>
                   </div>
                   {touched.email && errors.email && (
-                    <motion.p 
-                      initial={{ opacity: 0, y: -10 }}
+                    <motion.p
+                      initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-1.5 text-xs text-destructive flex items-center gap-1"
+                      id="email-error"
+                      className="text-xs text-destructive mt-1.5 flex items-center gap-1"
                     >
-                      <X className="w-3 h-3" /> {errors.email}
+                      <X className="w-3 h-3" />
+                      {errors.email}
                     </motion.p>
                   )}
                 </div>
@@ -535,64 +543,67 @@ const Contact = () => {
                     <Input
                       id="mobile"
                       type="tel"
-                      placeholder="Enter 10-digit mobile number"
+                      placeholder="10-digit mobile number"
                       value={formData.mobile}
                       onChange={(e) => handleMobileChange(e.target.value)}
                       onFocus={() => setFocusedField("mobile")}
                       onBlur={() => handleBlur("mobile")}
                       className={getInputStyles("mobile")}
+                      aria-invalid={!!errors.mobile}
+                      aria-describedby={errors.mobile ? "mobile-error" : undefined}
                     />
                     <div className="absolute right-3 top-1/2 -translate-y-1/2">
                       {renderFieldStatus("mobile")}
                     </div>
                   </div>
                   {touched.mobile && errors.mobile && (
-                    <motion.p 
-                      initial={{ opacity: 0, y: -10 }}
+                    <motion.p
+                      initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-1.5 text-xs text-destructive flex items-center gap-1"
+                      id="mobile-error"
+                      className="text-xs text-destructive mt-1.5 flex items-center gap-1"
                     >
-                      <X className="w-3 h-3" /> {errors.mobile}
+                      <X className="w-3 h-3" />
+                      {errors.mobile}
                     </motion.p>
                   )}
                 </div>
 
-                {/* Service Select */}
+                {/* Service Field */}
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
                     Service Required <span className="text-destructive">*</span>
                   </label>
-                  <div className="relative">
-                    <Select
-                      value={formData.service}
-                      onValueChange={handleServiceChange}
+                  <Select
+                    value={formData.service}
+                    onValueChange={handleServiceChange}
+                    onOpenChange={(open) => {
+                      if (!open) handleBlur("service");
+                    }}
+                  >
+                    <SelectTrigger
+                      id="service"
+                      className={`${getInputStyles("service")} w-full`}
+                      aria-invalid={!!errors.service}
                     >
-                      <SelectTrigger 
-                        id="service"
-                        className={getInputStyles("service")}
-                        onBlur={() => handleBlur("service")}
-                      >
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    <div className="absolute right-10 top-1/2 -translate-y-1/2">
-                      {renderFieldStatus("service")}
-                    </div>
-                  </div>
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {services.map((service) => (
+                        <SelectItem key={service} value={service}>
+                          {service}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   {touched.service && errors.service && (
-                    <motion.p 
-                      initial={{ opacity: 0, y: -10 }}
+                    <motion.p
+                      initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-1.5 text-xs text-destructive flex items-center gap-1"
+                      className="text-xs text-destructive mt-1.5 flex items-center gap-1"
                     >
-                      <X className="w-3 h-3" /> {errors.service}
+                      <X className="w-3 h-3" />
+                      {errors.service}
                     </motion.p>
                   )}
                 </div>
@@ -607,32 +618,32 @@ const Contact = () => {
                     placeholder="Describe your AC issue or requirements..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[100px] bg-background border-2 rounded-xl resize-none focus-visible:ring-accent/20"
+                    className="min-h-[100px] bg-background border-2 rounded-xl resize-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+                    rows={4}
                   />
                 </div>
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  variant="accent"
-                  size="lg"
-                  className="w-full"
                   disabled={isSubmitting || !isFormValid()}
+                  className="w-full h-14 text-base font-semibold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      Sending...
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Processing...
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
-                      Send Enquiry
+                      <Send className="w-5 h-5 mr-2" />
+                      Submit Enquiry
                     </>
                   )}
                 </Button>
 
-                <p className="text-xs text-center text-muted-foreground">
+                {/* Helper Text */}
+                <p className="text-center text-xs text-muted-foreground">
                   By submitting, you agree to our{" "}
                   <a href="/privacy-policy" className="text-accent hover:underline">
                     Privacy Policy

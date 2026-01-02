@@ -132,9 +132,9 @@ const Services = () => {
               <Snowflake className="w-4 h-4" />
               Our Services
             </motion.span>
-            <h2 className="heading-lg text-primary mb-5">
+            <h2 className="heading-lg text-foreground mb-5">
               Comprehensive{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-dark">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan">
                 AC Solutions
               </span>
             </h2>
@@ -170,11 +170,11 @@ const Services = () => {
                 className="group relative bg-card rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 overflow-hidden"
               >
                 {/* Gradient Border Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/20 via-transparent to-purple-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/20 via-transparent to-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute inset-[1px] rounded-2xl bg-card" />
                 
                 {/* Glow Effect */}
-                <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-purple-dark/30 blur-xl transition-opacity duration-500 ${hoveredIndex === index ? "opacity-40" : "opacity-0"}`} />
+                <div className={`absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-cyan/30 blur-xl transition-opacity duration-500 ${hoveredIndex === index ? "opacity-40" : "opacity-0"}`} />
 
                 {/* Content */}
                 <div className="relative z-10">
@@ -188,12 +188,12 @@ const Services = () => {
                   )}
 
                   {/* Icon */}
-                  <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-gradient-to-br from-accent/10 to-purple-light/10 w-fit mb-3 md:mb-5 group-hover:from-accent group-hover:to-purple-dark group-hover:shadow-glow transition-all duration-500">
+                  <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-gradient-to-br from-accent/10 to-cyan/10 w-fit mb-3 md:mb-5 group-hover:from-accent group-hover:to-sky-500 group-hover:shadow-glow transition-all duration-500">
                     <service.icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:text-white transition-colors duration-300" />
                   </div>
 
                   {/* Title & Price */}
-                  <h3 className="font-display font-bold text-primary mb-1 md:mb-2 text-sm md:text-lg leading-tight group-hover:text-accent transition-colors duration-300">
+                  <h3 className="font-display font-bold text-foreground mb-1 md:mb-2 text-sm md:text-lg leading-tight group-hover:text-accent transition-colors duration-300">
                     {service.title}
                   </h3>
                   
@@ -231,7 +231,7 @@ const Services = () => {
                 </div>
 
                 {/* Bottom Border Animation */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-purple-dark scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-cyan scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-b-2xl" />
               </motion.div>
             ))}
           </motion.div>
@@ -249,11 +249,11 @@ const Services = () => {
             >
               <DialogHeader>
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-accent/10 to-purple-light/10">
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-accent/10 to-cyan/10">
                     <selectedService.icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <DialogTitle className="text-xl font-display font-bold text-primary">
+                    <DialogTitle className="text-xl font-display font-bold text-foreground">
                       {selectedService.title}
                     </DialogTitle>
                     <p className="text-2xl font-bold text-accent mt-1">{selectedService.price}</p>
@@ -267,7 +267,7 @@ const Services = () => {
                 </p>
 
                 <div>
-                  <h4 className="font-display font-semibold text-primary mb-4 text-sm flex items-center gap-2">
+                  <h4 className="font-display font-semibold text-foreground mb-4 text-sm flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-accent" />
                     What's Included:
                   </h4>
