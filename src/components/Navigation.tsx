@@ -96,9 +96,11 @@ const Navigation = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className="text-lg md:text-xl font-bold text-white drop-shadow-md">
-                Comfort Technical Services
-              </span>
+              <img 
+                src={logo} 
+                alt="Comfort Technical Services" 
+                className="h-10 md:h-12 w-auto drop-shadow-md"
+              />
             </motion.a>
 
             {/* Desktop Navigation */}
