@@ -88,7 +88,7 @@ const Services = () => {
 
   const handleWhatsApp = (serviceName: string) => {
     const message = encodeURIComponent(`Hi, I'm interested in ${serviceName}. Please provide more details.`);
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    window.open(`https://wa.me/917745046520?text=${message}`, "_blank");
   };
 
   const handleRequestQuote = (serviceName: string) => {

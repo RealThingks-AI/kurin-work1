@@ -67,14 +67,13 @@ const Clients = () => {
           className="text-center max-w-3xl mx-auto mb-10"
         >
           <span className="inline-block px-4 py-2 mb-4 text-sm font-medium rounded-full bg-accent/10 text-accent">
-            Our Prestigious Clients
+            Happy Customers
           </span>
-          <h2 className="heading-lg text-primary mb-6">
-            Trusted by <span className="text-accent">Industry Leaders</span>
+          <h2 className="heading-lg text-foreground mb-4">
+            Serving <span className="text-accent">1000+ Customers</span>
           </h2>
-          <p className="text-body">
-            Kurin Hygienic's satisfied clients include many institutions and businesses in your community. 
-            We take pride in building long-term relationships with our partners.
+          <p className="text-body text-muted-foreground">
+            From homes to offices, we've earned the trust of residential and commercial clients across Pune & PCMC.
           </p>
         </motion.div>
 
@@ -173,7 +172,7 @@ const Clients = () => {
               ))}
             </div>
             <span className="text-sm text-muted-foreground">
-              <span className="font-semibold text-primary">50+</span> satisfied clients across industries
+              <span className="font-semibold text-foreground">1000+</span> satisfied customers across Pune & PCMC
             </span>
           </div>
         </motion.div>

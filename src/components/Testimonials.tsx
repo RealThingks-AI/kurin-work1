@@ -86,13 +86,13 @@ const Testimonials = () => {
   return (
     <section 
       id="testimonials" 
-      className="py-12 md:py-16 bg-primary/5"
+      className="section-padding bg-accent/5"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"
       aria-label="Customer testimonials"
     >
-      <div className="container mx-auto px-4">
+      <div className="section-container">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Trusted by 5,000+ happy customers across Pune & PCMC
+            Trusted by 1000+ satisfied customers across Pune & PCMC
           </p>
         </motion.div>
 

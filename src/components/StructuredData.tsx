@@ -4,20 +4,15 @@ const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Kurin Hygienic Services",
-    "alternateName": "Kurin Hygienic",
-    "url": "https://kurinhygienic.com",
-    "logo": "https://kurinhygienic.com/logo.png",
-    "description": "Premium Manpower & Facility Management Solutions provider offering 24x7 quality services including staff outsourcing, housekeeping, security, and MEP services.",
-    "foundingDate": "2010",
-    "sameAs": [
-      "https://www.facebook.com/kurinhygienic",
-      "https://www.linkedin.com/company/kurinhygienic",
-      "https://www.instagram.com/kurinhygienic"
-    ],
+    "name": "Comfort Technical Services",
+    "alternateName": "CTS AC Services",
+    "url": "https://comfortservice.in",
+    "logo": "https://comfortservice.in/logo.png",
+    "description": "Professional AC servicing, repair & installation provider in Pune & PCMC. 7+ years experience with 1000+ AC units serviced. Same-day service available.",
+    "foundingDate": "2018",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-9876543210",
+      "telephone": "+91-7745046520",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi", "Marathi"],
       "areaServed": "IN"
@@ -27,37 +22,43 @@ const StructuredData = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Kurin Hygienic Services",
-    "image": "https://kurinhygienic.com/logo.png",
-    "@id": "https://kurinhygienic.com",
-    "url": "https://kurinhygienic.com",
-    "telephone": "+91-9876543210",
-    "priceRange": "$$",
+    "name": "Comfort Technical Services",
+    "image": "https://comfortservice.in/logo.png",
+    "@id": "https://comfortservice.in",
+    "url": "https://comfortservice.in",
+    "telephone": "+91-7745046520",
+    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Pune",
+      "streetAddress": "NIKHIL NIWAS, SURVEY NO.179, SHOP NO-02",
       "addressLocality": "Pune",
       "addressRegion": "Maharashtra",
-      "postalCode": "411001",
+      "postalCode": "411035",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 18.5204,
-      "longitude": 73.8567
+      "latitude": 18.6298,
+      "longitude": 73.7997
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "150"
+      "ratingValue": "5.0",
+      "reviewCount": "57"
     }
   };
 
@@ -67,42 +68,42 @@ const StructuredData = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What services does Kurin Hygienic provide?",
+        "name": "How much does AC servicing cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We provide comprehensive facility management services including housekeeping, security services, staff outsourcing, MEP services, pest control, landscaping, and specialized cleaning solutions for various industries."
+          "text": "Our AC servicing starts from just ₹399. This includes filter cleaning, coil inspection, refrigerant level check, and performance optimization. Deep cleaning services start from ₹599."
         }
       },
       {
         "@type": "Question",
-        "name": "What industries do you serve?",
+        "name": "Do you service all AC brands?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We serve a wide range of industries including IT Parks, Manufacturing, Healthcare, Hospitality, Retail, Government, Education, and Residential complexes across Pune and Maharashtra."
+          "text": "Yes! We service all major AC brands including LG, Samsung, Daikin, Voltas, Blue Star, Hitachi, Carrier, Panasonic, Whirlpool, and many more."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you provide 24/7 services?",
+        "name": "What areas do you cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide round-the-clock 24x7 services to ensure your facilities are always well-maintained and secure. Our team is available at all times to address any urgent requirements."
+          "text": "We cover all of Pune and PCMC including Aundh, Wakad, Hinjewadi, Pimple Saudagar, Pimpri, Chinchwad, Kharadi, Viman Nagar, Baner, Kothrud, and 15+ other localities."
         }
       },
       {
         "@type": "Question",
-        "name": "How can I request a quote?",
+        "name": "How quickly can you come?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can request a quote by filling out our contact form on the website, calling us directly, or sending us an email. Our team will get back to you within 24 hours with a customized proposal."
+          "text": "We offer same-day service for most requests made before 2 PM. Our average response time is 2-4 hours depending on your location."
         }
       },
       {
         "@type": "Question",
-        "name": "Are your staff trained and verified?",
+        "name": "Do you provide AMC plans?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, all our staff undergo thorough background verification and comprehensive training programs. We ensure they are skilled, professional, and adhere to the highest industry standards."
+          "text": "Yes! Our AMC plans start from ₹2,499/year for homes (4 visits), ₹4,999/year for offices (6 visits with gas top-up), and custom plans for commercial establishments."
         }
       }
     ]
@@ -111,45 +112,65 @@ const StructuredData = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Facility Management",
+    "serviceType": "AC Repair and Maintenance",
     "provider": {
-      "@type": "Organization",
-      "name": "Kurin Hygienic Services"
+      "@type": "LocalBusiness",
+      "name": "Comfort Technical Services"
     },
     "areaServed": {
       "@type": "Place",
-      "name": "Pune, Maharashtra, India"
+      "name": "Pune, PCMC, Maharashtra, India"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Facility Management Services",
+      "name": "AC Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Housekeeping Services"
+            "name": "AC Servicing",
+            "description": "Complete AC servicing including filter cleaning, coil inspection, and performance check"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Security Services"
+            "name": "AC Repair",
+            "description": "Expert AC repair services for all brands and models"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Staff Outsourcing"
+            "name": "AC Installation",
+            "description": "Professional AC installation for split and window units"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "MEP Services"
+            "name": "AC Gas Refill",
+            "description": "Refrigerant gas refilling and leak detection services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AC Deep Cleaning",
+            "description": "Thorough deep cleaning with coil wash and anti-bacterial treatment"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Annual Maintenance Contract",
+            "description": "AMC plans starting from ₹2,499/year with multiple service visits"
           }
         }
       ]

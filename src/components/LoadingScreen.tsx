@@ -122,7 +122,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
               {/* Logo */}
               <motion.img
                 src={logo}
-                alt="Kurin Hygienic"
+                alt="Comfort Technical Services"
                 className="relative w-24 h-24 md:w-32 md:h-32 object-contain z-10"
                 animate={{
                   y: [0, -5, 0],
@@ -137,12 +137,12 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
 
             {/* Company name */}
             <motion.h1
-              className="text-2xl md:text-3xl font-bold text-white mb-2"
+              className="text-2xl md:text-3xl font-bold text-white mb-2 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <span className="text-accent">Kurin</span> Hygienic
+              <span className="text-accent">Comfort</span> Technical Services
             </motion.h1>
 
             {/* Tagline */}
@@ -152,7 +152,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              Premium Facility Management
+              Professional AC Services
             </motion.p>
 
             {/* Progress bar */}

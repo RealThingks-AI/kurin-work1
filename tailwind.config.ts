@@ -57,15 +57,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          dark: "hsl(var(--navy-dark))",
-          light: "hsl(var(--navy-light))",
+        green: {
+          DEFAULT: "hsl(var(--green))",
+          dark: "hsl(var(--green-dark))",
+          light: "hsl(var(--green-light))",
         },
-        purple: {
-          DEFAULT: "hsl(var(--purple))",
-          light: "hsl(var(--purple-light))",
-          dark: "hsl(var(--purple-dark))",
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          light: "hsl(var(--red-light))",
+          dark: "hsl(var(--red-dark))",
         },
         slate: "hsl(var(--slate))",
         "light-gray": "hsl(var(--light-gray))",
@@ -136,8 +136,8 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsla(265, 55%, 50%, 0.4)" },
-          "50%": { boxShadow: "0 0 40px hsla(265, 55%, 50%, 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsla(0, 55%, 38%, 0.4)" },
+          "50%": { boxShadow: "0 0 40px hsla(0, 55%, 38%, 0.6)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },

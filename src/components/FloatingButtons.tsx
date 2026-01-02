@@ -28,7 +28,7 @@ const FloatingButtons = () => {
             )}
           </AnimatePresence>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/917745046520"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"

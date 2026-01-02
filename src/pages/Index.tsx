@@ -11,7 +11,7 @@ const About = lazy(() => import("@/components/About"));
 const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs"));
 const Services = lazy(() => import("@/components/Services"));
 const Process = lazy(() => import("@/components/Process"));
-const Industries = lazy(() => import("@/components/Industries"));
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas"));
 const Clients = lazy(() => import("@/components/Clients"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const FAQ = lazy(() => import("@/components/FAQ"));
@@ -27,7 +27,7 @@ const Index = () => {
         <title>Comfort Technical Services – AC Service & Repair in Pune & PCMC</title>
         <meta
           name="description"
-          content="Professional AC servicing, repair & installation in Pune & PCMC. 7+ years experience, 10,000+ units serviced. Same-day service available. Call now!"
+          content="Professional AC servicing, repair & installation in Pune & PCMC. 7+ years experience, 1000+ units serviced. Same-day service available. Call now!"
         />
         <meta
           name="keywords"
@@ -82,7 +82,7 @@ const Index = () => {
         
         <ErrorBoundary>
           <Suspense fallback={<SectionSkeleton type="grid" />}>
-            <Industries />
+            <ServiceAreas />
           </Suspense>
         </ErrorBoundary>
         

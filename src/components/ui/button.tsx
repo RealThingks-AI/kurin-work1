@@ -15,7 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-accent underline-offset-4 hover:underline",
-        // Custom Kurin variants
+        // Custom CTS variants
         hero: "bg-accent text-accent-foreground shadow-lg shadow-accent/30 hover:shadow-glow hover:-translate-y-1 active:translate-y-0 hover:bg-accent-hover",
         heroOutline: "bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 hover:shadow-lg",
         accent: "bg-accent text-accent-foreground shadow-md shadow-accent/20 hover:shadow-accent hover:-translate-y-0.5 hover:bg-accent-hover",

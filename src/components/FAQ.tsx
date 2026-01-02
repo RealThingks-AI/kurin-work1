@@ -43,8 +43,8 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-12 md:py-16 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="section-padding bg-secondary/30">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,10 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <span className="inline-block px-4 py-2 mb-4 text-sm font-medium rounded-full bg-accent/10 text-accent">
+            FAQ
+          </span>
+          <h2 className="heading-lg text-foreground mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

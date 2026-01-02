@@ -1,32 +1,9 @@
-import { Phone, Facebook, Instagram, Twitter, Youtube, MapPin, Mail, ArrowUp } from "lucide-react";
+import { Phone, MapPin, Mail, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    icon: Facebook,
-    url: "https://www.facebook.com/kurin2018",
-  },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    url: "https://www.instagram.com/_kurin.hygienic",
-  },
-  {
-    name: "Twitter",
-    icon: Twitter,
-    url: "https://www.twitter.com/@KurinHygienic",
-  },
-  {
-    name: "YouTube",
-    icon: Youtube,
-    url: "https://www.youtube.com/@kurinpune8354",
-  },
-];
 
 const quickLinks = [
   { label: "About Us", href: "#about" },
@@ -66,32 +43,12 @@ const Footer = () => {
           >
             <img 
               src={logo} 
-              alt="Kurin Hygienic" 
+              alt="Comfort Technical Services" 
               className="h-12 md:h-14 w-auto mb-4"
             />
             <p className="text-white/60 text-sm mb-5 leading-relaxed max-w-xs">
-              Providing comprehensive manpower and facility management solutions since 2018.
+              Professional AC servicing, repair, and maintenance since 2018. Serving Pune and PCMC with excellence for over 7 years.
             </p>
-            
-            {/* Social Links */}
-            <div className="flex gap-2 flex-wrap">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Follow us on ${social.name}`}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
-                  whileHover={{ y: -3, scale: 1.1 }}
-                  className="p-2.5 rounded-xl bg-white/10 hover:bg-accent hover:shadow-glow transition-all duration-300 group"
-                >
-                  <social.icon className="w-4 h-4 text-white/70 group-hover:text-accent-foreground transition-colors" />
-                </motion.a>
-              ))}
-            </div>
           </motion.div>
 
           {/* Quick Links */}
@@ -127,25 +84,25 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                 <span className="text-white/60 text-sm leading-relaxed flex-1 min-w-0">
-                  Office No. 06, Swami Plaza, Shahunagar, Chinchwad, Pune – 411019
+                  NIKHIL NIWAS, SURVEY NO.179, SHOP NO-02, Pune, PCMC – 411035
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
-                  href="tel:7038613623"
+                  href="tel:7745046520"
                   className="text-white/60 hover:text-accent text-sm transition-colors flex-1 min-w-0"
                 >
-                  +91 7038 613 623
+                  +91 77450 46520
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
-                  href="mailto:kurin.pune@gmail.com"
+                  href="mailto:comforttechnicalservice8@gmail.com"
                   className="text-white/60 hover:text-accent text-sm transition-colors flex-1 min-w-0 break-all"
                 >
-                  kurin.pune@gmail.com
+                  comforttechnicalservice8@gmail.com
                 </a>
               </li>
             </ul>
@@ -160,7 +117,7 @@ const Footer = () => {
           >
             <h4 className="text-white font-display font-semibold mb-4">Get a Quote</h4>
             <p className="text-white/60 text-sm mb-4 max-w-xs">
-              Need manpower solutions? Contact us for a free consultation.
+              Need AC service? Contact us for a free consultation and quote.
             </p>
             <a
               href="#contact"
@@ -184,7 +141,7 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <p className="text-white/50 text-sm">
-              © {currentYear} Kurin Hygienic. All rights reserved.
+              © {currentYear} Comfort Technical Services. All rights reserved.
             </p>
           </motion.div>
 

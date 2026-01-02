@@ -52,31 +52,6 @@ const values = [
   },
 ];
 
-// Animated counter component
-const AnimatedCounter = ({ value, suffix = "", duration = 2 }: { value: number; suffix?: string; duration?: number }) => {
-  const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
-  useState(() => {
-    if (isInView) {
-      let startTime: number;
-      const animate = (currentTime: number) => {
-        if (!startTime) startTime = currentTime;
-        const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        setDisplayValue(Math.floor(easeOut * value));
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    }
-  });
-
-  return <span ref={ref}>{displayValue}{suffix}</span>;
-};
-
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -85,9 +60,9 @@ const About = () => {
 
   const stats = [
     { value: 7, suffix: "+", label: "Years Experience", details: "Since 2018, Comfort Technical Services has been serving Pune & PCMC with professional AC services. Our experience has made us experts in handling all types of AC units from all major brands." },
-    { value: 10000, suffix: "+", label: "Units Serviced", details: "We've successfully serviced over 10,000 AC units across Pune and PCMC. From simple servicing to complex repairs, our track record speaks for itself." },
-    { value: 5000, suffix: "+", label: "Happy Customers", details: "Over 5,000 satisfied customers trust us for their AC needs. Many have been with us since day one, and word-of-mouth referrals remain our biggest source of new business." },
-    { value: 15, suffix: "+", label: "Service Areas", details: "We cover 15+ localities across Pune and PCMC including Aundh, Wakad, Hinjewadi, Pimple Saudagar, Pimpri, Chinchwad, Kharadi, Viman Nagar, Baner, and more." },
+    { value: 1000, suffix: "+", label: "AC Units Serviced", details: "We've successfully serviced over 1,000 AC units across Pune and PCMC. From simple servicing to complex repairs, our track record speaks for itself." },
+    { value: 57, suffix: "+", label: "Google Reviews", details: "Our customers love us! With 57+ Google reviews and a perfect 5.0 rating, we're proud of the trust our customers place in us." },
+    { value: 5, suffix: "/5", label: "Google Rating", details: "A perfect 5.0 Google rating reflects our unwavering commitment to quality service, transparent pricing, and customer satisfaction." },
   ];
 
   const visionDetails = "Our vision is to become Pune's most trusted AC service provider. We aim to set new standards in the industry through consistent quality, transparent pricing, and exceptional customer care. We want every home and business in Pune & PCMC to have access to reliable, affordable AC services.";
@@ -133,7 +108,7 @@ const About = () => {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-primary">5.0 Google Rating</div>
-                    <div className="text-xs text-muted-foreground">Trusted by 5,000+ Customers</div>
+                    <div className="text-xs text-muted-foreground">57+ Verified Reviews</div>
                   </div>
                 </div>
               </motion.div>

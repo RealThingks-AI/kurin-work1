@@ -132,7 +132,7 @@ const Navigation = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="tel:9876543210" className="flex items-center gap-2">
+              <a href="tel:7745046520" className="flex items-center gap-2">
                 <Button
                   variant={isScrolled ? "accent" : "glass"}
                   size="lg"
@@ -259,14 +259,14 @@ const Navigation = () => {
                 transition={{ delay: 0.3 }}
                 className="p-6 border-t border-border bg-muted/50"
               >
-                <a href="tel:7038613623" className="block">
+                <a href="tel:7745046520" className="block">
                   <Button variant="accent" size="lg" className="w-full gap-2 font-semibold">
                     <Phone className="w-5 h-5" />
                     Call Now
                   </Button>
                 </a>
                 <p className="text-center text-xs text-muted-foreground mt-3">
-                  Available 24/7 for your queries
+                  Mon-Sat: 9AM-7PM | Sun: 10AM-5PM
                 </p>
               </motion.div>
             </motion.div>

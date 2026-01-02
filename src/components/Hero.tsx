@@ -231,7 +231,7 @@ const Hero = () => {
             className="text-lg md:text-xl lg:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed font-light"
           >
             Professional AC servicing, repair & installation in Pune & PCMC.
-            Trusted by 10,000+ customers with 7+ years of experience.
+            Trusted by 1000+ customers with 7+ years of experience.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -251,7 +251,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <a href="tel:9876543210">
+            <a href="tel:7745046520">
               <Button variant="heroOutline" size="xl" className="min-w-[130px] sm:min-w-[220px] text-sm sm:text-base px-4 sm:px-6">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 Call Now
