@@ -123,7 +123,7 @@ const LoadingScreen = ({ onLoadingComplete, minDuration = 2000 }: LoadingScreenP
               <motion.img
                 src={logo}
                 alt="Comfort Technical Services"
-                className="relative w-24 h-24 md:w-32 md:h-32 object-contain z-10"
+                className="relative w-24 h-24 md:w-32 md:h-32 object-contain z-10 rounded-xl"
                 animate={{
                   y: [0, -5, 0],
                 }}

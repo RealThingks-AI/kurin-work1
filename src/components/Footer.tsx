@@ -8,7 +8,7 @@ import logo from "@/assets/logo.png";
 const quickLinks = [
   { label: "About Us", href: "#about" },
   { label: "Our Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
+  { label: "Service Areas", href: "#service-areas" },
   { label: "Contact", href: "#contact" },
 ];
 

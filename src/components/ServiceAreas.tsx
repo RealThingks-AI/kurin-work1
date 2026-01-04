@@ -32,7 +32,7 @@ const ServiceAreas = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="industries" className="section-padding bg-secondary/30" ref={ref}>
+    <section id="service-areas" className="section-padding bg-secondary/30" ref={ref}>
       <div className="section-container">
         {/* Header */}
         <motion.div
