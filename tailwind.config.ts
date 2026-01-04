@@ -127,6 +127,14 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         "pulse-glow": {
           "0%, 100%": { boxShadow: "0 0 20px hsla(199, 89%, 48%, 0.4)" },
           "50%": { boxShadow: "0 0 40px hsla(199, 89%, 48%, 0.6)" },
@@ -166,6 +174,8 @@ export default {
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
         "slide-in-up": "slide-in-up 0.5s ease-out forwards",
         marquee: "marquee 40s linear infinite",
+        "scroll-left": "scroll-left 40s linear infinite",
+        "scroll-right": "scroll-right 40s linear infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
         "spin-slow": "spin-slow 20s linear infinite",

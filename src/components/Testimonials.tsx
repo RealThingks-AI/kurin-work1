@@ -208,7 +208,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Google Review CTA */}
+        {/* Trust Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -216,15 +216,11 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <a
-            href="https://g.page/r/comfort-technical-services/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-xl font-medium text-sm hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-          >
-            <Star className="w-4 h-4" />
-            Rate Us on Google
-          </a>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent rounded-xl font-medium text-sm">
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            <span className="text-foreground">4.8/5 Average Rating</span>
+            <span className="text-muted-foreground">• 1000+ Happy Customers</span>
+          </div>
         </motion.div>
       </div>
     </section>
