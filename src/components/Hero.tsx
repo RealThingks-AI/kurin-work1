@@ -267,7 +267,7 @@ const Hero = () => {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
-        className="absolute bottom-0 left-0 right-0 bg-white/98 backdrop-blur-md py-4 md:py-6 border-t border-border/10 shadow-lg"
+        className="absolute bottom-0 left-0 right-0 bg-white backdrop-blur-md py-4 md:py-6 border-t border-gray-200 shadow-lg"
       >
         <div className="section-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -279,12 +279,12 @@ const Hero = () => {
                 transition={{ delay: 0.8 + index * 0.1 }}
                 className="flex items-center gap-3 p-2 md:p-3"
               >
-                <div className="p-2 md:p-3 rounded-xl bg-accent/10">
-                  <badge.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                <div className="p-2 md:p-3 rounded-xl bg-sky-100">
+                  <badge.icon className="w-5 h-5 md:w-6 md:h-6 text-sky-600" />
                 </div>
                 <div>
-                  <p className="text-xs md:text-sm font-semibold text-foreground">{badge.label}</p>
-                  <p className="text-[10px] md:text-xs text-muted-foreground">{badge.desc}</p>
+                  <p className="text-xs md:text-sm font-semibold text-slate-800">{badge.label}</p>
+                  <p className="text-[10px] md:text-xs text-slate-500">{badge.desc}</p>
                 </div>
               </motion.div>
             ))}

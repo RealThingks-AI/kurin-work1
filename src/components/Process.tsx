@@ -97,7 +97,7 @@ const Process = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-white/70 mb-4"
+            className="text-xl text-white/80 mb-4"
           >
             Getting your AC serviced has never been easier
           </motion.p>
@@ -164,7 +164,7 @@ const Process = () => {
                   {/* Text */}
                   <motion.h3
                     className={`font-display font-bold text-lg mb-2 transition-colors duration-300 ${
-                      activeStep >= index ? "text-white" : "text-white/50"
+                      activeStep >= index ? "text-white" : "text-white/70"
                     }`}
                     animate={activeStep === index ? { y: [0, -3, 0] } : {}}
                     transition={{ duration: 0.3 }}
@@ -173,7 +173,7 @@ const Process = () => {
                   </motion.h3>
                   <p
                     className={`text-sm transition-colors duration-300 ${
-                      activeStep >= index ? "text-white/70" : "text-white/40"
+                      activeStep >= index ? "text-white/80" : "text-white/60"
                     }`}
                   >
                     {step.description}
@@ -241,14 +241,14 @@ const Process = () => {
                   <div className="flex-1 min-w-0 pt-1 pr-2">
                     <h3
                       className={`font-display font-bold text-base sm:text-lg mb-1 transition-colors duration-300 ${
-                        activeStep >= index ? "text-white" : "text-white/50"
+                        activeStep >= index ? "text-white" : "text-white/70"
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
                       className={`text-sm transition-colors duration-300 ${
-                        activeStep >= index ? "text-white/70" : "text-white/40"
+                        activeStep >= index ? "text-white/80" : "text-white/60"
                       }`}
                     >
                       {step.description}

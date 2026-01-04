@@ -46,7 +46,7 @@ const Footer = () => {
               alt="Comfort Technical Services" 
               className="h-12 md:h-14 w-auto mb-4"
             />
-            <p className="text-white/60 text-sm mb-5 leading-relaxed max-w-xs">
+            <p className="text-white/70 text-sm mb-5 leading-relaxed max-w-xs">
               Professional AC servicing, repair, and maintenance since 2018. Serving Pune and PCMC with excellence for over 7 years.
             </p>
           </motion.div>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-white/60 hover:text-accent text-sm transition-colors flex items-center gap-2 group"
+                    className="text-white/70 hover:text-accent text-sm transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-white/30 group-hover:bg-accent transition-colors" />
                     {link.label}
@@ -83,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-white/60 text-sm leading-relaxed flex-1 min-w-0">
+                <span className="text-white/70 text-sm leading-relaxed flex-1 min-w-0">
                   NIKHIL NIWAS, SURVEY NO.179, SHOP NO-02, Pune, PCMC – 411035
                 </span>
               </li>
@@ -91,7 +91,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="tel:7745046520"
-                  className="text-white/60 hover:text-accent text-sm transition-colors flex-1 min-w-0"
+                  className="text-white/70 hover:text-accent text-sm transition-colors flex-1 min-w-0"
                 >
                   +91 77450 46520
                 </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
                   href="mailto:comforttechnicalservice8@gmail.com"
-                  className="text-white/60 hover:text-accent text-sm transition-colors flex-1 min-w-0 break-all"
+                  className="text-white/70 hover:text-accent text-sm transition-colors flex-1 min-w-0 break-all"
                 >
                   comforttechnicalservice8@gmail.com
                 </a>
@@ -116,7 +116,7 @@ const Footer = () => {
             className="sm:col-span-2 lg:col-span-1"
           >
             <h4 className="text-white font-display font-semibold mb-4">Get a Quote</h4>
-            <p className="text-white/60 text-sm mb-4 max-w-xs">
+            <p className="text-white/70 text-sm mb-4 max-w-xs">
               Need AC service? Contact us for a free consultation and quote.
             </p>
             <a
@@ -140,7 +140,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-center md:text-left"
           >
-            <p className="text-white/50 text-sm">
+            <p className="text-white/60 text-sm">
               © {currentYear} Comfort Technical Services. All rights reserved.
             </p>
           </motion.div>
@@ -154,13 +154,13 @@ const Footer = () => {
           >
             <Link
               to="/privacy-policy"
-              className="text-white/50 hover:text-accent transition-colors"
+              className="text-white/60 hover:text-accent transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
-              className="text-white/50 hover:text-accent transition-colors"
+              className="text-white/60 hover:text-accent transition-colors"
             >
               Terms & Conditions
             </Link>
